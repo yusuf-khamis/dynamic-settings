@@ -160,6 +160,7 @@ export default function SettingField<C extends Config>(props: SettingFieldProps<
           <Button
             type="button"
             className="mt-4"
+            disabled={value?.length === config.max}
             onClick={() => onChange([...(value ?? [config.element.default ?? '']), config.element.default])}
           >
             Add value
